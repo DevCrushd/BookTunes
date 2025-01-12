@@ -16,14 +16,14 @@
             background-color: #f3f4f6;
         }
         .container {
-            background: #ffffff;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 4350px;
-            box-sizing: border-box; /* Add this line */
-        }
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        box-sizing: border-box;
+    }
         h1 {
             font-size: 1.5rem;
             margin-bottom: 20px;
@@ -52,6 +52,21 @@
             border-radius: 4px;
             border: 1px solid #ddd;
             word-wrap: break-word;
+        }
+        @media (max-width: 600px) {
+        body {
+            padding: 20px;
+        }
+        .container {
+            padding: 20px;
+            box-shadow: none;
+        }
+        input, button {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+        h1 {
+            font-size: 1.2rem;
         }
     </style>
 </head>
