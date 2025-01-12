@@ -16,26 +16,33 @@
             background-color: #f3f4f6;
         }
         .container {
-        background: #ffffff;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 600px;
-        box-sizing: border-box;
-    }
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
         h1 {
             font-size: 1.5rem;
             margin-bottom: 20px;
             text-align: center;
         }
-        input, button {
-            width: 100%;
+        input {
+            width: 90%;
+            max-width: 400px; /* Set a max-width for input */
             padding: 10px;
-            margin: 10px 0;
+            margin: 10px auto; /* Center the input */
+            display: block; /* Ensure it is a block element */
             font-size: 1rem;
         }
         button {
+            width: auto; /* Let the button size itself */
+            padding: 10px;
+            margin: 10px auto; /* Center the button */
+            display: block; /* Ensure it is a block element */
+            font-size: 1rem;
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -53,20 +60,25 @@
             border: 1px solid #ddd;
             word-wrap: break-word;
         }
+    
+        /* Media query for mobile devices */
         @media (max-width: 600px) {
-        body {
-            padding: 20px;
-        }
-        .container {
-            padding: 20px;
-            box-shadow: none;
-        }
-        input, button {
-            font-size: 0.9rem;
-            padding: 8px;
-        }
-        h1 {
-            font-size: 1.2rem;
+            body {
+                padding: 20px;
+            }
+            .container {
+                padding: 20px;
+                box-shadow: none;
+            }
+            input, button {
+                width: 100%;
+                max-width: 100%; /* Ensure full width on mobile */
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
