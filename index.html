@@ -84,11 +84,20 @@
                 if (playlists.length === 0) {
                     resultDiv.textContent = "No playlists found.";
                 } else {
-                    resultDiv.innerHTML = playlists.map(playlist => `
+                    /*resultDiv.innerHTML = playlists.map(playlist => `
                         <div>
                             <a href="${playlist.external_urls.spotify}" target="_blank">${playlist.name}</a>
                         </div>
-                    `).join('');
+                    `).join('');*/
+                    resultDiv.innerHTML = playlists.map(playlist => {
+                    if (playlist && playlist.external_urls && playlist.external_urls.spotify) {
+                    return `<div>
+                    <a href="${playlist.external_urls.spotify}" target="_blank">${playlist.name}</a>
+                </div>`;
+    } else {
+        return "<div>Invalid playlist data</div>";
+    }
+}).join('');
                 }
             } catch (error) {
                 resultDiv.textContent = `Error: ${error.message}`;
